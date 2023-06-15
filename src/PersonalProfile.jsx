@@ -75,8 +75,14 @@ const PersonalProfile = ({ profileImg = require('./Media/Profile2.png') }) => {
 
     const handleChangePassword = (event) => {
         const passwordData = event.target.value;
-            setPassword(passwordData);
+        setPassword(passwordData);
     };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert("Form submitted!");
+        window.location.reload();
+    }
 
     return (
         <div className="containerProfile">
@@ -84,7 +90,7 @@ const PersonalProfile = ({ profileImg = require('./Media/Profile2.png') }) => {
                 <h1>Edit Profile</h1>
                 <img src={profileImg} style={{ width: '100px', height: '100px' }} />
             </div>
-            <form className="formProfile">
+            <form className="formProfile" onSubmit={handleSubmit}>
                 <div className="fastLastName">
                     <label>
                         Fast Name
@@ -149,8 +155,8 @@ const PersonalProfile = ({ profileImg = require('./Media/Profile2.png') }) => {
                     <input type="password" value={password} onChange={handleChangePassword}>
                     </input>
                 </div>
+                <button type="submit">Save</button>
             </form>
-            <button type="submit">Save</button>
         </div>
     )
 }
