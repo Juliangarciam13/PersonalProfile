@@ -57,7 +57,7 @@ button {
 .fastLastName input,
 .cityState input,
 .zipCodeCountry input {
-    width: 11vw;
+    width: 12vw;
 }
 
 .headerProfile img {
@@ -70,7 +70,7 @@ button {
 .address input,
 .contactsNumber input,
 .password input {
-    width: 25vw;
+    width: 27vw;
 }
 
 @media(max-width : 760px) {
@@ -81,13 +81,13 @@ button {
     .fastLastName input,
     .cityState input,
     .zipCodeCountry input {
-        width: 100%;
+        width: 24vw;
     }
 
     .email input,
     .address input,
     .contactsNumber input,
     .password input {
-        width: 44vh;
+        width: 48vh;
     }
 }
